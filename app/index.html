@@ -13,13 +13,16 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="angularTestApp">
+  <body>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <div ng-app="angularTestApp">
+      <header ng-include="'views/nav.html'" role="banner"></header>
+      <div class="container" ui-view=""></div>
+      <footer ng-include="'views/footer.html'" role="contentinfo"></footer>
+    </div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
