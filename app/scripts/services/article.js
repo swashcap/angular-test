@@ -11,7 +11,7 @@ angular.module('angularTestApp')
     };
 
     // Make requests to server's article API
-    var request = function(method, id) {
+    var request = function (method, id) {
       return $http({
         'method': method,
         url: formatRequestUrl(id)
