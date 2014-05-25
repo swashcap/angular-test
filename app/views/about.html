@@ -1,1 +1,72 @@
-<p>This is the about view.</p>
+
+<div class="row">
+  <div class="col-sm-8">
+    <h1>About</h1>
+    <p class="lead">Praesent laoreet gravida fermentum. Maecenas consectetur, odio at elementum vehicula, elit ante imperdiet enim, vel luctus leo metus quis tortor.</p>
+    <p>Suspendisse potenti. Nam eget purus mi. Maecenas eleifend tempus erat, eget fringilla lorem venenatis et. Curabitur dui nisi, mattis non ultrices at, adipiscing eget libero. Integer consequat quam vitae diam lacinia tristique. Donec malesuada blandit feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent in semper lacus. Vestibulum ut nulla non massa imperdiet condimentum. Sed nulla tortor, tristique aliquam elementum id, ullamcorper sit amet turpis. Donec volutpat viverra turpis, nec tristique dui aliquet non. Maecenas justo lorem, vestibulum eu feugiat vitae, ultrices nec ipsum.</p>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Design</h3>
+          </div>
+          <div class="panel-body">
+            <p>Suspendisse in tortor dolor, in feugiat nisl. Vivamus velit sapien, vestibulum id suscipit in, placerat id massa. Quisque sed urna eros, ut eleifend purus.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Development</h3>
+          </div>
+          <div class="panel-body">
+            <p>In consequat eleifend ligula, id iaculis ipsum ultricies et. Mauris ut sem et nunc tempus commodo. Mauris fermentum, nisi eu accumsan rutrum, dui libero gravida orci, non porttitor tortor velit vel velit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Content</h3>
+          </div>
+          <div class="panel-body">
+            <p>In luctus convallis pellentesque. Nunc et odio erat, non fringilla nisi. Donec quis turpis urna, ac adipiscing risus. Maecenas sed eros at diam elementum condimentum.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title">Mobile</h3>
+          </div>
+          <div class="panel-body">
+            <p>Sed quis porttitor tellus. Nunc porttitor urna non nisi faucibus fringilla. Donec porttitor lorem sed lectus mattis at viverra nibh consectetur. Aliquam commodo libero quis felis sollicitudin venenatis.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <section class="col-sm-4">
+    <h2>Clients</h2>
+
+    <div class="form-group">
+      <label for="about-search-1">Search list</label>
+      <input type="search" class="form-control" id="about-search-1" placeholder="Ex: “Coca Cola”" />
+    </div>
+
+    <div ng-repeat="client in clients" class="media">
+      <a class="pull-left" href="#">
+        <img class="media-object" src="/images/logo-{{ randomInt }}.jpg" alt="Logo">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">{{ client }}</h4>
+        ...
+      </div>
+    </div>
+  </section>
+</div>
