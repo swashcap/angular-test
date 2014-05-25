@@ -56,16 +56,15 @@
 
     <div class="form-group">
       <label for="about-search-1">Search list</label>
-      <input type="search" class="form-control" id="about-search-1" placeholder="Ex: “Coca Cola”" />
+      <input ng-model="search.name" type="search" class="form-control" id="about-search-1" placeholder="Ex: “Coca Cola”" />
     </div>
 
-    <div ng-repeat="client in clients" class="media">
-      <a class="pull-left" href="#">
-        <img class="media-object" src="/images/logo-{{ randomInt }}.jpg" alt="Logo">
-      </a>
+    <div ng-repeat="client in clients | filter:search" class="media">
+      <div class="pull-left">
+        <img class="media-object" src="{{ client.logo }}" alt="Logo" width="32" height="32">
+      </div>
       <div class="media-body">
-        <h4 class="media-heading">{{ client }}</h4>
-        ...
+        <h4 class="media-heading">{{ client.name }}</h4>
       </div>
     </div>
   </section>
