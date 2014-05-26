@@ -1,10 +1,8 @@
 'use strict';
 
 angular.module('angularTestApp')
-  .controller('HomeCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('HomeCtrl', ['$scope', 'Feed', function ($scope, Feed) {
+    $scope.feed = new Feed(1);
+
+    $scope.feed.nextPage();
+  }]);
