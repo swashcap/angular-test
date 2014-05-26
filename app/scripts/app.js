@@ -1,3 +1,4 @@
+/* global FastClick */
 'use strict';
 
 angular.module('angularTestApp', [
@@ -31,3 +32,11 @@ angular.module('angularTestApp', [
       controller: 'ContactCtrl'
     });
 }]);
+
+/**
+ * Other plugin configurations.
+ * @todo Move this to a separate file.
+ */
+window.addEventListener('load', function() {
+  FastClick.attach(document.body);
+}, false);
