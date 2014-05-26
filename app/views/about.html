@@ -61,7 +61,7 @@
 
     <div ng-repeat="client in clients | filter:search" class="media">
       <div class="pull-left">
-        <img class="media-object" src="{{ client.logo }}" alt="Logo" width="32" height="32">
+        <img class="media-object" ng-src="{{ client.logo }}" alt="Logo" width="32" height="32">
       </div>
       <div class="media-body">
         <h4 class="media-heading">{{ client.name }}</h4>
