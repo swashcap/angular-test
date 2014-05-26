@@ -1,4 +1,5 @@
 <h1>Articles</h1>
+
 <article ng-repeat="article in articles">
   <div class="row">
     <div class="col-sm-9">
@@ -9,7 +10,7 @@
     <div class="col-sm-3 col-sm-push-9">
       <div class="media">
         <a class="pull-left" href="#">
-          <img class="media-object img-rounded" src="{{ article.feed.image }}" alt="{{ article.feed.name }}" width="32" height="32">
+          <img class="media-object img-rounded" ng-src="{{ article.feed.image }}" alt="{{ article.feed.name }}" width="32" height="32">
         </a>
         <div class="media-body">
           <h5 class="media-heading"><a href="#">{{ article.feed.name }}</a></h5>
