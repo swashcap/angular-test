@@ -1,1 +1,28 @@
-<p>This is the home view.</p>
+<h1>{{ feed.name }} <small ng-show="feed.subtitle">{{ feed.subtitle }}</small></h1>
+
+<article id="" ng-repeat="article in feed.articles" class="hentry clearfix">
+  <div class="row">
+    <div class="col-sm-9">
+      <h2 class="entry-title"><a ng-href="{{ article.link }}">{{ article.title }}</a></h2>
+    </div>
+    <div class="col-sm-3">
+      <div class="media">
+        <img ng-src="{{ feed.favicon }}" alt="{{ article.author.name }}" class="pull-left img-rounded" width="16" height="16" />
+        <div class="media-body">
+          <h4 class="media-heading">{{ article.author.name }}</h4>
+          <time>{{ article.published | date:'short' }}</time>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9">
+      <div ng-bind-html="article.content" class="entry-content"></div>
+    </div>
+  </div>
+</article>
+
+<div class="text-center">
+  <button ng-click="feed.nextPage()" class="btn btn-default">Load more</button>
+  <div ng-show="! feed.busy">Loading articles&hellip;</div>
+</div>
